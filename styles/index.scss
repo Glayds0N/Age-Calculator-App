@@ -1,0 +1,302 @@
+// Define suas variáveis de cor
+$primary: hsl(259, 100%, 65%);
+$input: hsl(0, 1%, 50%);
+$input-wrong: hsl(0, 100%, 67%);
+$input-success: hsl(257, 83%, 47%);
+$background: hsl(0, 0%, 86%);
+$background-app: hsl(0, 0%, 100%);
+
+// Define o tamanho base da fonte para melhor responsividade
+html {
+  font-size: 16px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  background-color: $background;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction : column;
+
+  .container-app {
+    background-color: $background-app;
+    max-width: 35rem;
+    width: 90%;
+    padding: 2rem;
+    border-radius: 15px 15px 170px 15px;
+    position: relative;
+    margin-top: auto;
+
+    .container-data {
+      display: flex;
+      flex-direction: row;
+      gap: 0rem;
+      position: relative;
+      margin-bottom: 4rem;
+      justify-content: space-evenly;
+      
+      .data {
+        display: flex;
+        flex-direction: column;
+        letter-spacing: 0.15rem;
+        color: $input;
+        font-size: 1rem;
+        gap: 0.2rem;
+      }
+    }
+
+    input {
+      border: 1px solid $input;
+      border-radius: 5px;
+      box-sizing: border-box;
+      width: 9rem;
+      font-size: 2rem;
+      font-family: Poppins;
+      font-weight: 400;
+      padding: 0.4rem 0.6rem;
+    }
+
+    input::-webkit-inner-spin-button, input::-webkit-outer-spin-button {
+      appearance: none;
+    }
+
+    .wrong {
+      letter-spacing: normal;
+      font-size: 12px;
+      font-style: italic;
+      color: $input-wrong;
+      display: none;
+    }
+
+    .line {
+      border: 1px solid $input;
+      height: 0.5px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      .svg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: $primary;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        top: -40px;
+        right: -10px;
+        z-index: 1;
+      }
+    }
+  }
+
+  .container-result {
+    font-weight: 700;
+    font-size: 5rem;
+    font-style: italic;
+    margin-top: 40px;
+    margin-bottom: 2rem;
+
+    .result {
+      margin-bottom: -30px;
+    }
+    
+    .result-number{
+      color: $primary;
+    }
+
+
+    // .result-number {
+    // }
+
+    // Media query para telas menores (tablets e celulares)
+    @media (max-width: 1024px) {
+      font-size: 5rem;
+    }
+
+    // Media query para telas menores (mobile)
+    @media (max-width: 768px) {
+      font-size: 11vw;
+    }
+
+    // Media query para telas menores (smartphones)
+    @media (max-width: 375px) {
+      font-size: 14vw;
+    }
+
+    @media (max-width: 280px) {
+      font-size: 2rem;
+    }
+  }
+
+  footer {
+    margin-top: auto;
+    margin-bottom: 30px;
+  }
+
+  // Media query para telas menores (tablets e celulares)
+  @media (max-width: 1024px) {
+    .container-app {
+      max-width: 30rem;
+      width: 80%;
+      // height: 50%;
+      padding: 1.5rem;
+      margin-top: auto;
+
+      .container-data {
+        gap: 1rem;
+        margin-bottom: 4rem;
+      }
+
+      input {
+        width: 7rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+        padding: 0.3rem 0.5rem;
+      }
+
+      .line {
+        justify-content: center;
+      }
+      
+      .svg {
+        height: 70px;
+        width: 70px;
+        top: -30px;
+        right: auto;
+      }
+    }
+
+    .container-result{
+      .result{
+        margin-bottom: -30px;
+      }
+    }
+  }
+
+  // Media query para telas menores (mobile)
+  @media (max-width: 768px) {
+    .container-app {
+      width: 90%;
+      // height: 50%;
+      padding: 1.5rem;
+      margin-top: auto;
+
+      .container-data {
+        gap: 1rem;
+        margin-bottom: 4rem;
+      }
+
+      input {
+        width: 6rem;
+        height: 2.5rem;
+        font-size: 1rem;
+        padding: 0.3rem 0.5rem;
+      }
+
+      .line {
+        justify-content: center;
+      }
+      
+      .svg {
+        height: 70px;
+        width: 70px;
+        top: -30px;
+        right: auto;
+      }
+    }
+    .container-result{
+      .result{
+        margin-bottom: -20px;
+      }
+    }
+    
+  }
+
+  // Media query para telas menores (smartphones)
+  @media (max-width: 375px) {
+    .container-app {
+      width: 90%;
+      height: 75%;
+      padding: 1rem;
+      margin-top: auto;
+      // padding-bottom: 5rem;
+
+      .container-data {
+        gap: 0.8rem;
+        margin-bottom: 3rem;
+      }
+
+      input {
+        width: 5rem;
+        height: 2.5rem;
+        font-size: 1rem;
+        padding: 0.2rem 0.4rem;
+      }
+
+      .line .svg {
+        height: 70px;
+        width: 70px;
+        top: -30px;
+        right: auto;
+      }
+    }
+
+    .container-result{
+      .result{
+        margin-bottom: -20px;
+      }
+    }
+
+    
+  }
+
+  @media (max-width: 280px) {
+    .container-app {
+      width: 90%;
+      height: 75%;
+      padding: 1rem;
+      margin-top: auto;
+      // padding-bottom: 5rem;
+
+      .container-data {
+        gap: 0.8rem;
+        margin-bottom: 3rem;
+      }
+
+      input {
+        width: 4rem;
+        height: 2.5rem;
+        font-size: 1rem;
+        padding: 0.2rem 0.4rem;
+      }
+
+      .line .svg {
+        height: 70px;
+        width: 70px;
+        top: -30px;
+        right: auto;
+      }
+    }
+
+    .container-result{
+      .result{
+        margin-bottom: -20px;
+      }
+    }
+  }
+}
+
+// ... Código posterior ...

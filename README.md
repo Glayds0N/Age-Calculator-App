@@ -30,8 +30,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
+<img src="https://github.com/Glayds0N/tela-login-netflix/assets/95971025/b66b4091-1fcf-411f-adac-73aac0fad518" width="300px"/>
+<img src="https://github.com/Glayds0N/tela-login-netflix/assets/95971025/1518c288-71e5-4cbe-95c8-723b79f5bcf3" width="306px"/>
+<img src="https://github.com/Glayds0N/tela-login-netflix/assets/95971025/443dc53b-751a-4d12-8071-dc9fa303a0d7" width="300px"/>
 
 ### Links
 
